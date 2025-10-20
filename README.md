@@ -1,33 +1,44 @@
 FINHELPER - Interaktywny Pitch Deck
 
-Opis Projektu
+Nowoczesna, interaktywna prezentacja (pitch deck) dla aplikacji do zarządzania finansami osobistymi, zbudowana w całości przy użyciu technologii webowych.
 
-To repozytorium zawiera kod źródłowy interaktywnej prezentacji (pitch decku) dla nowoczesnej aplikacji do zarządzania finansami osobistymi. Projekt ten demonstruje koncepcję narzędzia, które pomaga użytkownikom odzyskać kontrolę nad wydatkami dzięki intuicyjnemu interfejsowi, wizualizacji danych i inteligentnej analizie.
+🚀 Zobacz na żywo
 
-Prezentacja została stworzona jako w pełni responsywna, jednostronicowa aplikacja webowa.
+Prezentacja jest dostępna online pod adresem: [Wklej tutaj link do GitHub Pages]
 
-Zobacz wersję live: [Tutaj wklej link do opublikowanej strony na GitHub Pages]
+🎯 O Projekcie
 
-Kluczowe Koncepcje Aplikacji (przedstawione w prezentacji):
+To repozytorium zawiera kod źródłowy interaktywnego pitch decku, który w nowoczesny sposób demonstruje kluczowe koncepcje i propozycję wartości aplikacji do zarządzania finansami. Prezentacja została zaprojektowana jako w pełni responsywna, jednostronicowa aplikacja, kładąc nacisk na czysty design i dynamiczne animacje, aby maksymalnie zaangażować odbiorcę.
 
-Pełna Kontrola: Agregacja wszystkich transakcji finansowych w jednym, przejrzystym panelu.
+✨ Kluczowe Funkcje (przedstawione w prezentacji)
 
-Inteligentna Wizualizacja: Dynamiczne wykresy i analizy porównawcze, które ułatwiają zrozumienie struktury wydatków.
+✅ Pełna Kontrola: Agregacja wszystkich transakcji finansowych w jednym, przejrzystym panelu.
 
-Automatyczne Raporty: Możliwość eksportu profesjonalnych podsumowań do formatów PDF i CSV.
+📊 Inteligentna Wizualizacja: Dynamiczne wykresy i analizy porównawcze, które ułatwiają zrozumienie struktury wydatków.
 
-Proaktywne Podpowiedzi: System, który analizuje dane i doradza użytkownikowi, gdzie można znaleźć oszczędności.
+📄 Automatyczne Raporty: Możliwość eksportu profesjonalnych podsumowań do formatów PDF i CSV.
 
-Technologia (użyta do budowy prezentacji):
+💡 Proaktywne Podpowiedzi: System, który analizuje dane i doradza użytkownikowi, gdzie można znaleźć oszczędności.
 
-HTML5
+🛠️ Zbudowane przy użyciu
 
-Tailwind CSS
+HTML5: Struktura prezentacji.
 
-Chart.js (do interaktywnych wykresów)
+Tailwind CSS: Stylizacja i responsywny design.
 
-Jak uruchomić lokalnie?
+Chart.js: Interaktywne i animowane wykresy danych.
 
-Sklonuj repozytorium.
+Czysty JavaScript (ES6+): Logika nawigacji, animacji i interaktywności.
 
-Otwórz plik index.html (wcześniej prezentacja.html) w dowolnej przeglądarce internetowej.
+🏁 Uruchomienie lokalne
+
+Aby uruchomić prezentację na własnym komputerze, postępuj zgodnie z poniższymi krokami:
+
+Sklonuj repozytorium:
+
+git clone [https://github.com/twoja-nazwa-uzytkownika/nazwa-repozytorium.git](https://github.com/twoja-nazwa-uzytkownika/nazwa-repozytorium.git)
+
+
+Przejdź do folderu projektu:
+
+cd nazwa-repozytorium
