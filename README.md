@@ -1,4 +1,4 @@
-FINHELPER - Interaktywny Pitch Deck
+#FINHELPER - Interaktywny Pitch Deck
 
 Nowoczesna, interaktywna prezentacja (pitch deck) dla aplikacji do zarządzania finansami osobistymi, zbudowana w całości przy użyciu technologii webowych.
 
