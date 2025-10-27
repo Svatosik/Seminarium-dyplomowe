@@ -1,0 +1,184 @@
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #1f2937; /* Dark Gray */
+    overflow: hidden;
+    background: #f9fafb; /* Light Gray Background */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Wyrównanie do góry */
+    align-items: center;
+    overflow-y: auto; /* Przewijanie na mobilnych */
+    padding: 5rem 1.5rem; 
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s ease-in-out;
+    transform: scale(0.98);
+}
+
+.slide::-webkit-scrollbar { display: none; }
+.slide { -ms-overflow-style: none; scrollbar-width: none; }
+
+@media (min-width: 640px) {
+    .slide {
+        justify-content: center; /* Centrowanie na desktopie */
+        padding: 6rem 2rem 4rem;
+        overflow-y: hidden; /* Wyłączenie przewijania */
+    }
+}
+
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.speaker-notes { display: none; }
+
+.gradient-text {
+    background: linear-gradient(90deg, #0d9488, #d97706); /* Dark Teal to Amber */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Animacje wejścia */
+.animated-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.slide.active .animated-element {
+    opacity: 1;
+    transform: translateY(0);
+}
+.slide.active .delay-1 { transition-delay: 0.1s; }
+.slide.active .delay-2 { transition-delay: 0.2s; }
+.slide.active .delay-3 { transition-delay: 0.3s; }
+.slide.active .delay-4 { transition-delay: 0.4s; }
+.slide.active .delay-5 { transition-delay: 0.5s; }
+
+/* Styl Karty */
+.card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+}
+
+/* Pasek postępu */
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #14b8a6, #f59e0b);
+    width: 0%;
+    transition: width 0.3s ease-out;
+    z-index: 50;
+}
+
+/* --- Style Mockupów --- */
+
+/* Telefon */
+.phone-mockup {
+    width: 200px;
+    height: 400px;
+    background: #1f2937;
+    border-radius: 25px;
+    padding: 12px;
+    box-shadow: 0 20px 40px -10px rgba(0,0,0,0.3);
+    flex-shrink: 0; 
+}
+.phone-screen {
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    overflow-y: auto;
+    padding: 1rem;
+    color: #374151;
+}
+.phone-screen::-webkit-scrollbar { display: none; }
+.phone-screen { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Laptop */
+.laptop-mockup {
+    position: relative;
+    width: 320px;
+    height: 200px;
+    background: #c0c0c0; /* Srebrna obudowa */
+    border-radius: 16px 16px 0 0;
+    padding: 12px 12px 0 12px;
+    box-shadow: 0 10px 30px -5px rgba(0,0,0,0.2);
+    flex-shrink: 0;
+}
+.laptop-mockup::after { /* Podstawa laptopa */
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 360px;
+    height: 10px;
+    background: #a9a9a9;
+    border-radius: 0 0 10px 10px;
+}
+.laptop-screen {
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    overflow-y: auto;
+    color: #374151;
+}
+.laptop-screen::-webkit-scrollbar { display: none; }
+.laptop-screen { -ms-overflow-style: none; scrollbar-width: none; }
+
+
+/* Media queries dla mockupów */
+@media (min-width: 640px) {
+    .phone-mockup {
+        width: 220px;
+        height: 440px;
+    }
+    .laptop-mockup {
+        width: 400px;
+        height: 250px;
+    }
+    .laptop-mockup::after {
+        width: 450px;
+    }
+}
+
+@media (min-width: 768px) {
+    .phone-mockup {
+        width: 250px;
+        height: 500px;
+    }
+    .phone-screen {
+        border-radius: 20px;
+    }
+    .laptop-mockup {
+        width: 480px;
+        height: 300px;
+    }
+    .laptop-mockup::after {
+        width: 540px;
+    }
+}

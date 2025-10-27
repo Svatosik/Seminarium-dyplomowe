@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitch Deck: FINHELPER</title>
+    <!-- Ładowanie bibliotek -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Ładowanie czcionek -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Ładowanie naszych stylów CSS -->
+    <link rel="stylesheet" href="../styles/style_spzedaz.css">
+</head>
+<body class="antialiased">
+
+    <!-- Pasek postępu -->
+    <div id="progress-bar"></div>
+
+    <!-- Główny kontener prezentacji -->
+    <main id="presentation-container">
+        
+        <!-- SLIDE 1: Tytuł & Hook -->
+        <section id="slide-1" class="slide active text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-5xl sm:text-6xl md:text-8xl font-black uppercase tracking-tighter gradient-text animated-element">FINHELPER</h1>
+                <h2 class="mt-4 text-xl sm:text-2xl md:text-3xl text-gray-700 animated-element delay-1">Koniec z finansową ślepotą. Pełna kontrola nad Twoimi wydatkami.</h2>
+                <div class="speaker-notes">"Każdego miesiąca miliony ludzi tracą pieniądze, nie wiedząc, gdzie one tak naprawdę znikają. To finansowa ślepota. FINHELPER to rozwiązanie, które daje pełną kontrolę nad wydatkami i zamienia chaos w porządek."</div>
+            </div>
+        </section>
+
+        <!-- SLIDE 2: Problem & Wartość Rynkowa -->
+        <section id="slide-2" class="slide">
+            <div class="max-w-4xl w-full text-center">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 animated-element">PROBLEM & WARTOŚĆ RYNKOWA</h2>
+                <div class="card p-6 md:p-8 animated-element delay-1">
+                    <p class="text-lg sm:text-xl md:text-2xl text-gray-800">
+                        Istniejące narzędzia do zarządzania budżetem są <span class="text-red-600 font-bold">skomplikowane</span>, <span class="text-red-600 font-bold">nieintuicyjne</span> i <span class="text-red-600 font-bold">czasochłonne</span>. 
+                        Użytkownicy rezygnują, tracąc szansę na realne oszczędności.
+                    </p>
+                    <p class="mt-8 text-xl sm:text-2xl md:text-3xl font-bold gradient-text animated-element delay-2">
+                        Nasza aplikacja optymalizuje wydatki, oszczędzając czas i pieniądze od pierwszego miesiąca.
+                    </p>
+                </div>
+                <div class="speaker-notes">"Rynek jest pełen topornych arkuszy kalkulacyjnych i przeładowanych aplikacji. Użytkownicy potrzebują prostoty i natychmiastowej wartości. Obiecujemy im jedno i drugie: optymalizację wydatków i oszczędność cennego czasu."</div>
+            </div>
+        </section>
+
+        <!-- SLIDE 3: Rozwiązanie w 3 Krokach -->
+        <section id="slide-3" class="slide">
+            <div class="max-w-5xl w-full">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 animated-element">ROZWIĄZANIE W 3 KROKACH</h2>
+                <!-- Zmniejszony odstęp (gap-8) na mobilnych -->
+                <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
+                    <!-- Mockup telefonu -->
+                    <div class="phone-mockup animated-element delay-1">
+                        <div class="phone-screen">
+                            <h4 class="font-bold">Twoje Wydatki</h4>
+                            <div class="mt-4 space-y-3 text-sm">
+                                <div class="flex justify-between p-2 bg-gray-100 rounded-lg"><span>🍔 Jedzenie</span> <span class="font-bold">-50 zł</span></div>
+                                <div class="flex justify-between p-2 bg-gray-100 rounded-lg"><span>⛽ Paliwo</span> <span class="font-bold">-150 zł</span></div>
+                                <div class="flex justify-between p-2 bg-gray-100 rounded-lg"><span>🎬 Kino</span> <span class="font-bold">-80 zł</span></div>
+                                <div class="flex justify-between p-2 bg-gray-100 rounded-lg"><span>🛒 Zakupy</span> <span class="font-bold">-220 zł</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Lista kroków - zmniejszone odstępy (space-y-4) -->
+                    <div class="space-y-4 md:space-y-6 max-w-md">
+                        <div class="flex items-start animated-element delay-2">
+                            <div class="flex-shrink-0 w-12 h-12 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center font-bold text-xl mr-4">1</div>
+                            <div>
+                                <h3 class="text-xl font-bold">Zintegruj Wydatki</h3>
+                                <p class="text-gray-600 mt-1">Wszystkie transakcje w jednym, przejrzystym panelu.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start animated-element delay-3">
+                             <div class="flex-shrink-0 w-12 h-12 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center font-bold text-xl mr-4">2</div>
+                            <div>
+                                <h3 class="text-xl font-bold">Wizualizuj Finanse</h3>
+                                <p class="text-gray-600 mt-1">Inteligentne wykresy pokazują, gdzie znikają Twoje pieniądze.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start animated-element delay-4">
+                             <div class="flex-shrink-0 w-12 h-12 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center font-bold text-xl mr-4">3</div>
+                            <div>
+                                <h3 class="text-xl font-bold">Generuj Raporty</h3>
+                                <p class="text-gray-600 mt-1">Profesjonalne podsumowania PDF/CSV jednym kliknięciem.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="speaker-notes">"Nasze rozwiązanie jest proste i namacalne. Użytkownik widzi wszystkie swoje wydatki w jednym miejscu, inteligentne wykresy pokazują mu prawdę o jego finansach, a na koniec dostaje profesjonalne raporty. To wszystko w trzech prostych krokach."</div>
+            </div>
+        </section>
+
+        <!-- SLIDE 4: Inteligentna Analiza i Wgląd (DEMO) -->
+        <section id="slide-4" class="slide">
+            <div class="max-w-5xl w-full text-center">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 animated-element">INTELIGENTNA ANALIZA I WGLĄD</h2>
+                <div class="card p-6 animated-element delay-1 flex flex-col lg:flex-row items-center gap-6">
+                    <div class="flex-grow w-full">
+                        <p class="text-lg mb-4 text-gray-700">Wydatki według kategorii (Październik vs Wrzesień)</p>
+                        <canvas id="expensesChart" class="w-full" style="max-height: 300px;"></canvas>
+                    </div>
+                     <div class="lg:w-1/3 text-left">
+                        <p class="text-lg sm:text-xl font-bold animated-element delay-2">Aplikacja nie tylko śledzi, ale i doradza, porównując dane i generując <span class="gradient-text">podpowiedzi finansowe</span>.</p>
+                    </div>
+                </div>
+                <div class="speaker-notes">"To nie jest kolejny tracker wydatków. To inteligentny asystent. Nasz system analizuje dane, porównuje je i generuje konkretne podpowiedzi – na przykład: 'W tym miesiącu wydałeś o 30% więcej na jedzenie na mieście'. To jest realna, użyteczna informacja."</div>
+            </div>
+        </section>
+
+        <!-- SLIDE 5: Architektura i Bezpieczeństwo -->
+        <section id="slide-5" class="slide">
+            <div class="max-w-4xl w-full text-center">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 animated-element">ARCHITEKTURA I BEZPIECZEŃSTWO</h2>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 text-lg font-bold">
+                    <div class="card p-4 sm:p-6 animated-element delay-1">APLIKACJA</div>
+                    <div class="text-teal-500 text-2xl font-mono animated-element delay-2 block md:hidden">&darr;</div>
+                    <div class="text-teal-500 text-2xl font-mono animated-element delay-2 hidden md:block">&rarr;</div>
+                    <div class="card p-4 sm:p-6 animated-element delay-3">API</div>
+                    <div class="text-teal-500 text-2xl font-mono animated-element delay-4 block md:hidden">&darr;</div>
+                    <div class="text-teal-500 text-2xl font-mono animated-element delay-4 hidden md:block">&rarr;</div>
+                    <div class="card p-4 sm:p-6 animated-element delay-5">BAZA DANYCH</div>
+                </div>
+                <!-- Zmniejszony odstęp (mt-8) i (gap-6) -->
+                <div class="mt-8 md:mt-10 grid md:grid-cols-2 gap-6 md:gap-8 text-left">
+                    <div class="card p-6 animated-element delay-2">
+                        <h3 class="font-bold text-xl mb-2 text-teal-600">Modułowa, skalowalna architektura</h3>
+                        <p class="text-gray-600">Gotowa na obsługę tysięcy użytkowników i łatwą rozbudowę o nowe funkcje.</p>
+                    </div>
+                    <div class="card p-6 animated-element delay-3">
+                        <h3 class="font-bold text-xl mb-2 text-teal-600">Bezpieczna autoryzacja</h3>
+                        <p class="text-gray-600">Logowanie przez Google i nowoczesne zarządzanie sesjami gwarantują bezpieczeństwo danych.</p>
+                    </div>
+                </div>
+                <div class="speaker-notes">"Nasza architektura jest nowoczesna, skalowalna i bezpieczna. Jesteśmy gotowi na szybki wzrost i integrację z kolejnymi systemami, a dane naszych użytkowników są chronione zgodnie z najwyższymi standardami."</div>
+            </div>
+        </section>
+
+        <!-- SLIDE 6: Przewaga Konkurencyjna & Wizja -->
+        <section id="slide-6" class="slide">
+            <div class="max-w-5xl w-full">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 animated-element">PRZEWAGA KONKURENCYJNA & WIZJA</h2>
+                <div class="grid md:grid-cols-2 gap-6 md:gap-10">
+                    <div class="card p-6 animated-element delay-1">
+                        <h3 class="text-2xl font-bold mb-4 border-b-2 border-teal-500 pb-2">Nasza Przewaga</h3>
+                        <ul class="space-y-3 list-disc list-inside text-lg text-gray-700">
+                            <li>Najlepszy i najprostszy UX/UI na rynku</li>
+                            <li>Inteligentna analiza i proaktywne podpowiedzi</li>
+                        </ul>
+                    </div>
+                    <div class="card p-6 animated-element delay-2">
+                        <h3 class="text-2xl font-bold mb-4 border-b-2 border-teal-500 pb-2">Wizja (Roadmapa)</h3>
+                        <ol class="space-y-3 list-decimal list-inside text-lg text-gray-700">
+                            <li><span class="font-bold">Q1:</span> Integracja z kontami bankowymi</li>
+                            <li><span class="font-bold">Q3:</span> Zaawansowany system budżetowania</li>
+                            <li><span class="font-bold">Q4:</span> Silnik AI do optymalizacji wydatków</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="speaker-notes">"Nasza przewaga? Prostota i inteligencja. Jesteśmy lepsi, bo skupiamy się na doświadczeniu użytkownika. A nasza wizja jest jasna: od ręcznej integracji, przez automatyzację z bankami, aż po wykorzystanie AI do proaktywnej optymalizacji budżetu. To jest przyszłość finansów osobistych."</div>
+            </div>
+        </section>
+
+        <!-- SLIDE 7: Call to Action -->
+        <section id="slide-7" class="slide text-center">
+             <div class="max-w-4xl mx-auto">
+                <p class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 card px-6 py-3 rounded-lg inline-block animated-element">KONTROLA, ANALIZA, OPTYMALIZACJA.</p>
+                <h2 class="text-4xl sm:text-5xl md:text-7xl font-black my-10 animated-element delay-1">Gotowi na rewolucję w finansach osobistych?</h2>
+                <p class="text-xl text-gray-500 animated-element delay-2">Sviatoslav Ilkiv</p>
+                <div class="speaker-notes">"Podsumowując: FINHELPER to kontrola, analiza i optymalizacja. To projekt z ogromnym potencjałem rynkowym. Państwa wsparcie to dla nas kluczowy krok w stronę komercjalizacji. Dziękuję."</div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Nawigacja -->
+    <div class="fixed bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-4 z-10">
+        <button id="prev-btn" class="card hover:bg-gray-200 text-gray-800 rounded-full p-3 transition-colors duration-300">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+        </button>
+        <div id="slide-counter" class="text-lg font-medium text-gray-700">1 / 7</div>
+        <button id="next-btn" class="card hover:bg-gray-200 text-gray-800 rounded-full p-3 transition-colors duration-300">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </button>
+    </div>
+
+    <!-- Ładowanie naszego skryptu JS -->
+    <script src="../scripts/script_sprzedaz.js" defer></script>
+</body>
+</html>
+

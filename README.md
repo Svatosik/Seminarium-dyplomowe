@@ -1,32 +1,60 @@
-<p align="center">
-</p>
-
-<h1 align="center">FINHELPER - Interaktywny Pitch Deck</h1>
+<h1 align="center">FINHELPER - Projekt Pracy Inżynierskiej</h1>
 
 <p align="center">
-Nowoczesna, interaktywna prezentacja (pitch deck) dla aplikacji do zarządzania finansami osobistymi, zbudowana w całości przy użyciu technologii webowych.
+Nowoczesna aplikacja webowa do zarządzania finansami osobistymi oraz repozytorium prezentacji projektowych.
 </p>
 
+🚀 Prezentacje Projektowe (Live Demo)
 
-🚀 Zobacz na żywo
+To repozytorium hostuje interaktywny portal demonstracyjny dla projektu.
 
-Prezentacja jest dostępna online pod adresem: https://svatosik.github.io/Seminarium-dyplomowe/
+Prezentacje są dostępne online pod adresem: https://svatosik.github.io/Seminarium-dyplomowe
 
 🎯 O Projekcie
 
-To repozytorium zawiera kod źródłowy interaktywnego pitch decku, który w nowoczesny sposób demonstruje kluczowe koncepcje i propozycję wartości aplikacji do zarządzania finansami. Prezentacja została zaprojektowana jako w pełni responsywna, jednostronicowa aplikacja, kładąc nacisk na czysty design i dynamiczne animacje, aby maksymalnie zaangażować odbiorcę.
+FINHELPER to aplikacja internetowa do monitorowania i optymalizacji wydatków domowych, stworzona jako część mojej pracy inżynierskiej.
 
-✨ Kluczowe Funkcje (przedstawione w prezentacji)
+Dlaczego stworzyłem ten projekt?
 
-✅ Pełna Kontrola: Agregacja wszystkich transakcji finansowych w jednym, przejrzystym panelu.
+Wielu z nas doświadcza "finansowej ślepoty" – pieniądze znikają z konta, ale nie mamy pełnej świadomości, na co dokładnie je wydajemy. Istniejące narzędzia są często zbyt skomplikowane, toporne lub nieintuicyjne, co zniechęca do regularnego prowadzenia budżetu.
 
-📊 Inteligentna Wizualizacja: Dynamiczne wykresy i analizy porównawcze, które ułatwiają zrozumienie struktury wydatków.
+Celem projektu FINHELPER było stworzenie narzędzia, które jest:
 
-📄 Automatyczne Raporty: Możliwość eksportu profesjonalnych podsumowań do formatów PDF i CSV.
+Intuicyjne: Posiada czysty, nowoczesny interfejs (UX/UI), który sprawia, że zarządzanie finansami jest proste.
+
+Wizualne: Zamienia suche liczby w zrozumiałe wykresy i analizy.
+
+Inteligentne: Nie tylko śledzi wydatki, ale także pomaga je optymalizować poprzez analizę i podpowiedzi.
+
+Co zawiera to repozytorium?
+
+To repozytorium służy jako centrum prezentacyjne dla aplikacji FINHELPER. Znajdują się tu dwie różne, interaktywne prezentacje webowe, stworzone, aby profesjonalnie przedstawić projekt:
+
+Portal Główny (index.html): Strona startowa, która pozwala wybrać jedną z dwóch prezentacji.
+
+Pitch Deck (/pages/sprzedaz.html): Prezentacja "sprzedażowa", skierowana do potencjalnych inwestorów. Skupia się na problemie rynkowym, propozycji wartości (Value Proposition) i wizji rozwoju.
+
+Demo Funkcjonalności (/pages/funkcji.html): Prezentacja techniczna, idealna na obronę pracy. Demonstruje krok po kroku kluczowe funkcje aplikacji, takie jak dashboard, CRUD transakcji, budżetowanie czy generowanie raportów.
+
+✨ Kluczowe Funkcje Aplikacji FINHELPER
+
+Aplikacja (prezentowana w demo) została zaprojektowana, aby oferować następujące możliwości:
+
+✅ Pełna Kontrola: Agregacja wszystkich transakcji finansowych (przychody i wydatki) w jednym, przejrzystym panelu.
+
+📊 Inteligentna Wizualizacja: Dynamiczne, interaktywne wykresy (kołowe, słupkowe) oraz analizy porównawcze (np. miesiąc do miesiąca).
+
+💰 Budżetowanie: Możliwość tworzenia niestandardowych kategorii i ustalania dla nich miesięcznych limitów budżetowych.
+
+📄 Automatyczne Raporty: Funkcja eksportu podsumowań finansowych do formatów PDF i CSV.
 
 💡 Proaktywne Podpowiedzi: System, który analizuje dane i doradza użytkownikowi, gdzie można znaleźć oszczędności.
 
-🛠️ Zbudowane przy użyciu
+🔒 Bezpieczeństwo: Pełna autoryzacja użytkowników (w tym logowanie przez Google) i izolacja danych.
+
+🛠️ Technologie (użyte do budowy prezentacji)
+
+Prezentacje w tym repozytorium zostały zbudowane przy użyciu nowoczesnych technologii webowych, aby zapewnić interaktywność i doskonały wygląd:
 
 HTML5: Struktura prezentacji.
 
@@ -35,3 +63,7 @@ Tailwind CSS: Stylizacja i responsywny design.
 Chart.js: Interaktywne i animowane wykresy danych.
 
 Czysty JavaScript (ES6+): Logika nawigacji, animacji i interaktywności.
+
+👤 Autor
+
+Sviatoslav Ilkiv
