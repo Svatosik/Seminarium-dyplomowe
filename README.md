@@ -10,7 +10,7 @@ Nowoczesna, interaktywna prezentacja (pitch deck) dla aplikacji do zarządzania 
 
 🚀 Zobacz na żywo
 
-Prezentacja jest dostępna online pod adresem: [Wklej tutaj link do GitHub Pages]
+Prezentacja jest dostępna online pod adresem: https://svatosik.github.io/Seminarium-dyplomowe/
 
 🎯 O Projekcie
 
