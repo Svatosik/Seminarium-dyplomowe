@@ -1,281 +1,713 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>Demo Funkcji: FINHELPER</title>
     <!-- Ładowanie bibliotek -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Ładowanie czcionek -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
     <!-- Ładowanie stylów CSS -->
-    <link rel="stylesheet" href="../styles/style_funkcji.css">
-</head>
-<body class="antialiased">
-
+    <link
+      rel="stylesheet"
+      href="../styles/style_funkcji.css"
+    />
+  </head>
+  <body class="antialiased">
     <!-- Pasek postępu -->
     <div id="progress-bar"></div>
 
     <!-- Główny kontener prezentacji -->
     <main id="presentation-container">
-        
-        <!-- SLIDE 1: Strona Tytułowa i Agenda -->
-        <section id="slide-1" class="slide active text-center">
-            <div class="max-w-4xl mx-auto">
-                <h1 class="text-5xl sm:text-6xl md:text-8xl font-black uppercase tracking-tighter gradient-text animated-element">
-                    FINHELPER
-                </h1>
-                <h2 class="mt-4 text-xl sm:text-2xl md:text-3xl text-gray-700 animated-element delay-1">
-                    Demonstracja Funkcjonalności
-                </h2>
-                <h3 class="mt-6 text-lg sm:text-xl md:text-2xl text-gray-600 animated-element delay-2">
-                    Aplikacja do monitorowania i optymalizacji wydatków domowych z funkcją raportowania
-                </h3>
-                
-                <div class="mt-12 text-lg md:text-xl text-gray-600 space-y-2">
-                    <p class="animated-element delay-3">
-                        <strong>Wykonawca:</strong> Sviatoslav Ilkiv
-                    </p>
-                    <p class="animated-element delay-4">
-                        <strong>Promotor:</strong> dr inż. Konrad Gruszka
-                    </p>
+      <!-- SLIDE 1: Strona Tytułowa i Agenda -->
+      <section
+        id="slide-1"
+        class="slide active text-center"
+      >
+        <div class="max-w-4xl mx-auto">
+          <h1
+            class="text-5xl sm:text-6xl md:text-8xl font-black uppercase tracking-tighter gradient-text animated-element"
+          >
+            FINHELPER
+          </h1>
+          <h2
+            class="mt-4 text-xl sm:text-2xl md:text-3xl text-gray-700 animated-element delay-1"
+          >
+            Demonstracja Funkcjonalności
+          </h2>
+          <h3
+            class="mt-6 text-lg sm:text-xl md:text-2xl text-gray-600 animated-element delay-2"
+          >
+            Aplikacja do monitorowania i optymalizacji wydatków domowych z
+            funkcją raportowania
+          </h3>
+
+          <div class="mt-12 text-lg md:text-xl text-gray-600 space-y-2">
+            <p class="animated-element delay-3">
+              <strong>Wykonawca:</strong> Sviatoslav Ilkiv
+            </p>
+            <p class="animated-element delay-4">
+              <strong>Promotor:</strong> dr inż. Konrad Gruszka
+            </p>
+          </div>
+
+          <div class="speaker-notes">
+            "Dzień dobry. Nazywam się Sviatoslav Ilkiv. W tej prezentacji skupię
+            się na szczegółowym omówieniu kluczowych funkcjonalności aplikacji
+            FINHELPER, pokazując, jak realizuje ona postawione cele: od
+            wprowadzania danych po zaawansowaną analizę."
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 2: Panel Główny (Dashboard) -->
+      <section
+        id="slide-2"
+        class="slide"
+      >
+        <div class="max-w-5xl w-full">
+          <h2
+            class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 animated-element"
+          >
+            Panel Główny: Finanse w Zasięgu Wzroku
+          </h2>
+          <div
+            class="flex flex-col md:flex-row items-center justify-center gap-12"
+          >
+            <!-- Mockup laptopa -->
+            <div class="laptop-mockup animated-element delay-1">
+              <div class="laptop-screen">
+                <!-- Uproszczona zawartość dashboardu -->
+                <div class="p-4">
+                  <h4 class="font-bold text-lg">Mój Dashboard</h4>
+                  <div class="mt-4 p-4 bg-teal-100 rounded-lg">
+                    <span class="text-sm text-teal-800">Saldo</span>
+                    <p class="text-2xl font-bold text-teal-900">1,250.00 zł</p>
+                  </div>
+                  <h5 class="font-bold mt-4">Ostatnie transakcje</h5>
+                  <div class="mt-2 space-y-2 text-sm">
+                    <div
+                      class="flex justify-between p-2 bg-gray-100 rounded-lg"
+                    >
+                      <span>🍔 Jedzenie</span>
+                      <span class="font-bold">-50 zł</span>
+                    </div>
+                    <div
+                      class="flex justify-between p-2 bg-gray-100 rounded-lg"
+                    >
+                      <span>⛽ Paliwo</span>
+                      <span class="font-bold">-150 zł</span>
+                    </div>
+                  </div>
                 </div>
-
-                <div class="speaker-notes">"Dzień dobry. Nazywam się Sviatoslav Ilkiv. W tej prezentacji skupię się na szczegółowym omówieniu kluczowych funkcjonalności aplikacji FINHELPER, pokazując, jak realizuje ona postawione cele: od wprowadzania danych po zaawansowaną analizę."</div>
+              </div>
             </div>
-        </section>
+            <!-- Lista funkcji -->
+            <ul class="space-y-4 md:space-y-6 max-w-md text-lg">
+              <li class="flex items-start animated-element delay-2">
+                <svg
+                  class="w-6 h-6 mr-3 text-teal-500 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+                <span>Szybki przegląd salda (Przychody - Wydatki).</span>
+              </li>
+              <li class="flex items-start animated-element delay-3">
+                <svg
+                  class="w-6 h-6 mr-3 text-teal-500 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"
+                  ></path>
+                </svg>
+                <span
+                  >Wizualny wykres "szybki wgląd" (np. ostatnie 7 dni).</span
+                >
+              </li>
+              <li class="flex items-start animated-element delay-4">
+                <svg
+                  class="w-6 h-6 mr-3 text-teal-500 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002-2h2a2 2 0 002 2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+                  ></path>
+                </svg>
+                <span>Lista ostatnich dodanych transakcji.</span>
+              </li>
+              <li class="flex items-start animated-element delay-5">
+                <svg
+                  class="w-6 h-6 mr-3 text-teal-500 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+                <span>Przyciski szybkiej akcji (Dodaj wydatek/przychód).</span>
+              </li>
+            </ul>
+          </div>
+          <div class="speaker-notes">
+            "Pierwszym ekranem po zalogowaniu jest Panel Główny. Został on
+            zaprojektowany jako centrum kontroli, dające użytkownikowi
+            natychmiastowy obraz jego sytuacji finansowej – widzi saldo,
+            ostatnie operacje oraz kluczowe przyciski nawigacyjne."
+          </div>
+        </div>
+      </section>
 
-        <!-- SLIDE 2: Panel Główny (Dashboard) -->
-        <section id="slide-2" class="slide">
-            <div class="max-w-5xl w-full">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 animated-element">Panel Główny: Finanse w Zasięgu Wzroku</h2>
-                <div class="flex flex-col md:flex-row items-center justify-center gap-12">
-                    <!-- Mockup laptopa -->
-                    <div class="laptop-mockup animated-element delay-1">
-                        <div class="laptop-screen">
-                            <!-- Uproszczona zawartość dashboardu -->
-                            <div class="p-4">
-                                <h4 class="font-bold text-lg">Mój Dashboard</h4>
-                                <div class="mt-4 p-4 bg-teal-100 rounded-lg">
-                                    <span class="text-sm text-teal-800">Saldo</span>
-                                    <p class="text-2xl font-bold text-teal-900">1,250.00 zł</p>
-                                </div>
-                                <h5 class="font-bold mt-4">Ostatnie transakcje</h5>
-                                <div class="mt-2 space-y-2 text-sm">
-                                    <div class="flex justify-between p-2 bg-gray-100 rounded-lg"><span>🍔 Jedzenie</span> <span class="font-bold">-50 zł</span></div>
-                                    <div class="flex justify-between p-2 bg-gray-100 rounded-lg"><span>⛽ Paliwo</span> <span class="font-bold">-150 zł</span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Lista funkcji -->
-                    <ul class="space-y-4 md:space-y-6 max-w-md text-lg">
-                        <li class="flex items-start animated-element delay-2">
-                            <svg class="w-6 h-6 mr-3 text-teal-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            <span>Szybki przegląd salda (Przychody - Wydatki).</span>
-                        </li>
-                        <li class="flex items-start animated-element delay-3">
-                           <svg class="w-6 h-6 mr-3 text-teal-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
-                            <span>Wizualny wykres "szybki wgląd" (np. ostatnie 7 dni).</span>
-                        </li>
-                        <li class="flex items-start animated-element delay-4">
-                            <svg class="w-6 h-6 mr-3 text-teal-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002-2h2a2 2 0 002 2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
-                            <span>Lista ostatnich dodanych transakcji.</span>
-                        </li>
-                        <li class="flex items-start animated-element delay-5">
-                            <svg class="w-6 h-6 mr-3 text-teal-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            <span>Przyciski szybkiej akcji (Dodaj wydatek/przychód).</span>
-                        </li>
-                    </ul>
+      <!-- SLIDE 3: Moduł Transakcji (CRUD) -->
+      <section
+        id="slide-3"
+        class="slide"
+      >
+        <div class="max-w-5xl w-full">
+          <h2
+            class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 animated-element"
+          >
+            Zarządzanie Transakcjami (CRUD)
+          </h2>
+          <div
+            class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12"
+          >
+            <!-- Mockup telefonu -->
+            <div class="phone-mockup animated-element delay-1">
+              <div class="phone-screen">
+                <h4 class="font-bold">Nowy Wydatek</h4>
+                <div class="mt-4 space-y-3 text-sm">
+                  <div>
+                    <label class="font-medium">Kwota</label
+                    ><input
+                      type="text"
+                      placeholder="0.00 zł"
+                      class="w-full p-2 border rounded-lg mt-1"
+                    />
+                  </div>
+                  <div>
+                    <label class="font-medium">Kategoria</label
+                    ><input
+                      type="text"
+                      placeholder="Wybierz..."
+                      class="w-full p-2 border rounded-lg mt-1"
+                    />
+                  </div>
+                  <div>
+                    <label class="font-medium">Opis</label
+                    ><input
+                      type="text"
+                      placeholder="Np. zakupy..."
+                      class="w-full p-2 border rounded-lg mt-1"
+                    />
+                  </div>
+                  <button
+                    class="w-full bg-teal-500 text-white p-3 rounded-lg font-bold mt-4"
+                  >
+                    Dodaj
+                  </button>
                 </div>
-                <div class="speaker-notes">"Pierwszym ekranem po zalogowaniu jest Panel Główny. Został on zaprojektowany jako centrum kontroli, dające użytkownikowi natychmiastowy obraz jego sytuacji finansowej – widzi saldo, ostatnie operacje oraz kluczowe przyciski nawigacyjne."</div>
+              </div>
             </div>
-        </section>
+            <!-- Lista funkcji -->
+            <ul class="space-y-4 md:space-y-6 max-w-md text-lg">
+              <li class="flex items-start animated-element delay-2">
+                <svg
+                  class="w-6 h-6 mr-3 text-teal-500 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                  ></path>
+                </svg>
+                <span>Formularz dodawania/edycji wydatków i przychodów.</span>
+              </li>
+              <li class="flex items-start animated-element delay-3">
+                <svg
+                  class="w-6 h-6 mr-3 text-teal-500 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                  ></path>
+                </svg>
+                <span
+                  >Możliwość trwałego usuwania każdej istniejącej
+                  transakcji.</span
+                >
+              </li>
+              <li class="flex items-start animated-element delay-4">
+                <svg
+                  class="w-6 h-6 mr-3 text-teal-500 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
+                  ></path>
+                </svg>
+                <span
+                  >Zaawansowane filtrowanie listy (po dacie, kategorii,
+                  kwocie).</span
+                >
+              </li>
+              <li class="flex items-start animated-element delay-5">
+                <svg
+                  class="w-6 h-6 mr-3 text-teal-500 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  ></path>
+                </svg>
+                <span
+                  >Dynamiczna wyszukiwarka tekstowa w opisach transakcji.</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="speaker-notes">
+            "Sercem aplikacji jest moduł transakcji, który w pełni implementuje
+            operacje CRUD. Użytkownik może łatwo dodawać, przeglądać, edytować i
+            usuwać każdą operację. Kluczowa jest tu funkcja filtrowania,
+            pozwalająca błyskawicznie analizować konkretne dane."
+          </div>
+        </div>
+      </section>
 
-        <!-- SLIDE 3: Moduł Transakcji (CRUD) -->
-        <section id="slide-3" class="slide">
-            <div class="max-w-5xl w-full">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 animated-element">Zarządzanie Transakcjami (CRUD)</h2>
-                <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
-                    <!-- Mockup telefonu -->
-                    <div class="phone-mockup animated-element delay-1">
-                        <div class="phone-screen">
-                            <h4 class="font-bold">Nowy Wydatek</h4>
-                            <div class="mt-4 space-y-3 text-sm">
-                                <div><label class="font-medium">Kwota</label><input type="text" placeholder="0.00 zł" class="w-full p-2 border rounded-lg mt-1"></div>
-                                <div><label class="font-medium">Kategoria</label><input type="text" placeholder="Wybierz..." class="w-full p-2 border rounded-lg mt-1"></div>
-                                <div><label class="font-medium">Opis</label><input type="text" placeholder="Np. zakupy..." class="w-full p-2 border rounded-lg mt-1"></div>
-                                <button class="w-full bg-teal-500 text-white p-3 rounded-lg font-bold mt-4">Dodaj</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Lista funkcji -->
-                    <ul class="space-y-4 md:space-y-6 max-w-md text-lg">
-                        <li class="flex items-start animated-element delay-2">
-                             <svg class="w-6 h-6 mr-3 text-teal-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                            <span>Formularz dodawania/edycji wydatków i przychodów.</span>
-                        </li>
-                        <li class="flex items-start animated-element delay-3">
-                            <svg class="w-6 h-6 mr-3 text-teal-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
-                            <span>Możliwość trwałego usuwania każdej istniejącej transakcji.</span>
-                        </li>
-                        <li class="flex items-start animated-element delay-4">
-                            <svg class="w-6 h-6 mr-3 text-teal-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"></path></svg>
-                            <span>Zaawansowane filtrowanie listy (po dacie, kategorii, kwocie).</span>
-                        </li>
-                        <li class="flex items-start animated-element delay-5">
-                            <svg class="w-6 h-6 mr-3 text-teal-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                            <span>Dynamiczna wyszukiwarka tekstowa w opisach transakcji.</span>
-                        </li>
-                    </ul>
+      <!-- SLIDE 4: Kategoryzacja i Budżetowanie -->
+      <section
+        id="slide-4"
+        class="slide"
+      >
+        <div class="max-w-5xl w-full">
+          <h2
+            class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 animated-element"
+          >
+            Inteligentna Organizacja: Kategorie i Budżety
+          </h2>
+          <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <!-- Lista funkcji -->
+            <ul class="space-y-4 md:space-y-6 text-lg">
+              <li class="flex items-start animated-element delay-1">
+                <svg
+                  class="w-6 h-6 mr-3 text-teal-500 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"
+                  ></path>
+                </svg>
+                <span
+                  >Definiowanie własnych, niestandardowych kategorii
+                  wydatków.</span
+                >
+              </li>
+              <li class="flex items-start animated-element delay-2">
+                <svg
+                  class="w-6 h-6 mr-3 text-teal-500 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"
+                  ></path>
+                </svg>
+                <span
+                  >Ustalanie miesięcznych limitów budżetowych dla
+                  kategorii.</span
+                >
+              </li>
+              <li class="flex items-start animated-element delay-3">
+                <svg
+                  class="w-6 h-6 mr-3 text-teal-500 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M11.5 8L8.5 5H4v14h16V5h-4.5l-3 3z"
+                  ></path>
+                </svg>
+                <span
+                  >Wizualne paski postępu pokazujące stopień wykorzystania
+                  budżetu.</span
+                >
+              </li>
+              <li class="flex items-start animated-element delay-4">
+                <svg
+                  class="w-6 h-6 mr-3 text-teal-500 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341A6.002 6.002 0 006 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+                  ></path>
+                </svg>
+                <span
+                  >Alerty (w przyszłości) o przekroczeniu limitu
+                  budżetowego.</span
+                >
+              </li>
+            </ul>
+            <!-- Wizualizacja budżetów -->
+            <div class="card p-6 w-full animated-element delay-2">
+              <h4 class="font-bold mb-4 text-lg">
+                Twoje Budżety (Październik)
+              </h4>
+              <div class="space-y-4">
+                <div>
+                  <div class="flex justify-between mb-1">
+                    <span class="font-medium">🍔 Jedzenie</span>
+                    <span class="text-sm">600 zł / 1000 zł</span>
+                  </div>
+                  <div class="w-full bg-gray-200 rounded-full h-4">
+                    <div
+                      class="bg-teal-500 h-4 rounded-full"
+                      style="width: 60%"
+                    ></div>
+                  </div>
                 </div>
-                <div class="speaker-notes">"Sercem aplikacji jest moduł transakcji, który w pełni implementuje operacje CRUD. Użytkownik może łatwo dodawać, przeglądać, edytować i usuwać każdą operację. Kluczowa jest tu funkcja filtrowania, pozwalająca błyskawicznie analizować konkretne dane."</div>
-            </div>
-        </section>
-
-        <!-- SLIDE 4: Kategoryzacja i Budżetowanie -->
-        <section id="slide-4" class="slide">
-            <div class="max-w-5xl w-full">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 animated-element">Inteligentna Organizacja: Kategorie i Budżety</h2>
-                <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-                    <!-- Lista funkcji -->
-                    <ul class="space-y-4 md:space-y-6 text-lg">
-                        <li class="flex items-start animated-element delay-1">
-                            <svg class="w-6 h-6 mr-3 text-teal-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path></svg>
-                            <span>Definiowanie własnych, niestandardowych kategorii wydatków.</span>
-                        </li>
-                        <li class="flex items-start animated-element delay-2">
-                           <svg class="w-6 h-6 mr-3 text-teal-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path></svg>
-                            <span>Ustalanie miesięcznych limitów budżetowych dla kategorii.</span>
-                        </li>
-                        <li class="flex items-start animated-element delay-3">
-                            <svg class="w-6 h-6 mr-3 text-teal-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.5 8L8.5 5H4v14h16V5h-4.5l-3 3z"></path></svg>
-                            <span>Wizualne paski postępu pokazujące stopień wykorzystania budżetu.</span>
-                        </li>
-                        <li class="flex items-start animated-element delay-4">
-                            <svg class="w-6 h-6 mr-3 text-teal-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341A6.002 6.002 0 006 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
-                            <span>Alerty (w przyszłości) o przekroczeniu limitu budżetowego.</span>
-                        </li>
-                    </ul>
-                    <!-- Wizualizacja budżetów -->
-                    <div class="card p-6 w-full animated-element delay-2">
-                        <h4 class="font-bold mb-4 text-lg">Twoje Budżety (Październik)</h4>
-                        <div class="space-y-4">
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="font-medium">🍔 Jedzenie</span>
-                                    <span class="text-sm">600 zł / 1000 zł</span>
-                                </div>
-                                <div class="w-full bg-gray-200 rounded-full h-4">
-                                    <div class="bg-teal-500 h-4 rounded-full" style="width: 60%"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="font-medium">🎬 Rozrywka</span>
-                                    <span class="text-sm">250 zł / 300 zł</span>
-                                </div>
-                                <div class="w-full bg-gray-200 rounded-full h-4">
-                                    <div class="bg-amber-500 h-4 rounded-full" style="width: 83%"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="font-medium">⛽ Transport</span>
-                                    <span class="text-sm">450 zł / 400 zł</span>
-                                </div>
-                                <div class="w-full bg-gray-200 rounded-full h-4">
-                                    <div class="bg-red-500 h-4 rounded-full" style="width: 100%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div>
+                  <div class="flex justify-between mb-1">
+                    <span class="font-medium">🎬 Rozrywka</span>
+                    <span class="text-sm">250 zł / 300 zł</span>
+                  </div>
+                  <div class="w-full bg-gray-200 rounded-full h-4">
+                    <div
+                      class="bg-amber-500 h-4 rounded-full"
+                      style="width: 83%"
+                    ></div>
+                  </div>
                 </div>
-                <div class="speaker-notes">"FINHELPER to nie tylko śledzenie wydatków, ale aktywne zarządzanie nimi. Umożliwiamy tworzenie własnych kategorii i, co najważniejsze, ustalanie miesięcznych budżetów. Aplikacja wizualnie pokazuje, ile środków pozostało w danej kategorii, co wspiera świadome podejmowanie decyzji."</div>
-            </div>
-        </section>
-
-        <!-- SLIDE 5: Analiza i Raportowanie (DEMO) -->
-        <section id="slide-5" class="slide">
-            <div class="max-w-5xl w-full text-center">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 animated-element">Magia Danych: Analizy i Raporty</h2>
-                <div class="card p-6 animated-element delay-1 flex flex-col lg:flex-row items-center gap-6">
-                    <div class="flex-grow w-full">
-                        <p class="text-lg mb-4 text-gray-700">Wydatki według kategorii (Październik vs Wrzesień)</p>
-                        <!-- Ten canvas jest celem dla script.js -->
-                        <canvas id="expensesChart" class="w-full" style="max-height: 300px;"></canvas>
-                    </div>
-                     <ul class="lg:w-1/3 text-left space-y-3">
-                        <li class="flex items-start text-lg font-bold animated-element delay-2">
-                             <span class="gradient-text">Porównanie miesiąc do miesiąca.</span>
-                        </li>
-                        <li class="flex items-start text-lg font-bold animated-element delay-3">
-                             <span class="gradient-text">Generowanie podpowiedzi finansowych.</span>
-                        </li>
-                         <li class="flex items-start text-lg font-bold animated-element delay-4">
-                             <span class="gradient-text">Eksport raportu do PDF oraz CSV.</span>
-                        </li>
-                    </ul>
+                <div>
+                  <div class="flex justify-between mb-1">
+                    <span class="font-medium">⛽ Transport</span>
+                    <span class="text-sm">450 zł / 400 zł</span>
+                  </div>
+                  <div class="w-full bg-gray-200 rounded-full h-4">
+                    <div
+                      class="bg-red-500 h-4 rounded-full"
+                      style="width: 100%"
+                    ></div>
+                  </div>
                 </div>
-                <div class="speaker-notes">"Tu widać prawdziwą siłę aplikacji. Surowe dane zamieniamy w wiedzę. Użytkownik może dynamicznie filtrować wykresy, porównywać okresy i identyfikować trendy. Na koniec, całe zestawienie może wyeksportować do pliku PDF lub CSV."</div>
+              </div>
             </div>
-        </section>
+          </div>
+          <div class="speaker-notes">
+            "FINHELPER to nie tylko śledzenie wydatków, ale aktywne zarządzanie
+            nimi. Umożliwiamy tworzenie własnych kategorii i, co najważniejsze,
+            ustalanie miesięcznych budżetów. Aplikacja wizualnie pokazuje, ile
+            środków pozostało w danej kategorii, co wspiera świadome
+            podejmowanie decyzji."
+          </div>
+        </div>
+      </section>
 
-        <!-- SLIDE 6: Bezpieczeństwo i Dostęp -->
-        <section id="slide-6" class="slide">
-            <div class="max-w-4xl w-full text-center">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 animated-element">Bezpieczeństwo Danych i Uwierzytelnianie</h2>
-                <div class="grid md:grid-cols-2 gap-6 md:gap-8 text-left">
-                    <div class="card p-6 animated-element delay-1">
-                        <h3 class="font-bold text-xl mb-2 text-teal-600">Rejestracja i Logowanie</h3>
-                        <p class="text-gray-600">Pełen system rejestracji i logowania użytkownika (e-mail/hasło).</p>
-                    </div>
-                    <div class="card p-6 animated-element delay-2">
-                        <h3 class="font-bold text-xl mb-2 text-teal-600">Logowanie Google (OAuth 2.0)</h3>
-                        <p class="text-gray-600">Integracja z zewnętrznym, bezpiecznym dostawcą tożsamości.</p>
-                    </div>
-                    <div class="card p-6 animated-element delay-3">
-                        <h3 class="font-bold text-xl mb-2 text-teal-600">Zarządzanie Sesją (JWT)</h3>
-                        <p class="text-gray-600">Bezpieczne zarządzanie sesją użytkownika za pomocą tokenów webowych.</p>
-                    </div>
-                    <div class="card p-6 animated-element delay-4">
-                        <h3 class="font-bold text-xl mb-2 text-teal-600">Izolacja Danych</h3>
-                        <p class="text-gray-600">Każdy użytkownik ma dostęp wyłącznie do swoich prywatnych finansów.</p>
-                    </div>
-                </div>
-                <div class="speaker-notes">"W aplikacji finansowej bezpieczeństwo jest priorytetem. Zaimplementowałem pełny system autoryzacji, w tym popularne i bezpieczne logowanie przez Google. Sesja jest zarządzana tokenami, a architektura bazy danych gwarantuje, że dane użytkowników są w pełni odizolowane."</div>
+      <!-- SLIDE 5: Analiza i Raportowanie (DEMO) -->
+      <section
+        id="slide-5"
+        class="slide"
+      >
+        <div class="max-w-5xl w-full text-center">
+          <h2
+            class="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 animated-element"
+          >
+            Magia Danych: Analizy i Raporty
+          </h2>
+          <div
+            class="card p-6 animated-element delay-1 flex flex-col lg:flex-row items-center gap-6"
+          >
+            <div class="flex-grow w-full">
+              <p class="text-lg mb-4 text-gray-700">
+                Wydatki według kategorii (Październik vs Wrzesień)
+              </p>
+              <!-- Ten canvas jest celem dla script.js -->
+              <canvas
+                id="expensesChart"
+                class="w-full"
+                style="max-height: 300px"
+              ></canvas>
             </div>
-        </section>
+            <ul class="lg:w-1/3 text-left space-y-3">
+              <li
+                class="flex items-start text-lg font-bold animated-element delay-2"
+              >
+                <span class="gradient-text"
+                  >Porównanie miesiąc do miesiąca.</span
+                >
+              </li>
+              <li
+                class="flex items-start text-lg font-bold animated-element delay-3"
+              >
+                <span class="gradient-text"
+                  >Generowanie podpowiedzi finansowych.</span
+                >
+              </li>
+              <li
+                class="flex items-start text-lg font-bold animated-element delay-4"
+              >
+                <span class="gradient-text"
+                  >Eksport raportu do PDF oraz CSV.</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="speaker-notes">
+            "Tu widać prawdziwą siłę aplikacji. Surowe dane zamieniamy w wiedzę.
+            Użytkownik może dynamicznie filtrować wykresy, porównywać okresy i
+            identyfikować trendy. Na koniec, całe zestawienie może wyeksportować
+            do pliku PDF lub CSV."
+          </div>
+        </div>
+      </section>
 
-        <!-- SLIDE 7: Podsumowanie Funkcjonalne i Pytania -->
-        <section id="slide-7" class="slide text-center">
-             <div class="max-w-4xl mx-auto">
-                <p class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 card px-6 py-3 rounded-lg inline-block animated-element">KONTROLA, ANALIZA, OPTYMALIZACJA.</p>
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold my-10 animated-element delay-1">
-                    <span class="gradient-text">FINHELPER</span> to kompletna platforma realizująca pełen cykl zarządzania finansami.
-                </h2>
-                <h3 class="text-4xl sm:text-5xl md:text-7xl font-black my-10 animated-element delay-2">Dziękuję za uwagę.</h3>
-                <div class="speaker-notes">"Podsumowując, FINHELPER z powodzeniem implementuje wszystkie kluczowe funkcje nowoczesnej aplikacji budżetowej: od rejestracji danych, przez ich kategoryzację i budżetowanie, aż po inteligentną analizę i bezpieczny eksport. Dziękuję za uwagę i zapraszam do zadawania pytań dotyczących funkcjonalności lub implementacji."</div>
+      <!-- SLIDE 6: Bezpieczeństwo i Dostęp -->
+      <section
+        id="slide-6"
+        class="slide"
+      >
+        <div class="max-w-4xl w-full text-center">
+          <h2
+            class="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 animated-element"
+          >
+            Bezpieczeństwo Danych i Uwierzytelnianie
+          </h2>
+          <div class="grid md:grid-cols-2 gap-6 md:gap-8 text-left">
+            <div class="card p-6 animated-element delay-1">
+              <h3 class="font-bold text-xl mb-2 text-teal-600">
+                Rejestracja i Logowanie
+              </h3>
+              <p class="text-gray-600">
+                Pełen system rejestracji i logowania użytkownika (e-mail/hasło).
+              </p>
             </div>
-        </section>
+            <div class="card p-6 animated-element delay-2">
+              <h3 class="font-bold text-xl mb-2 text-teal-600">
+                Logowanie Google (OAuth 2.0)
+              </h3>
+              <p class="text-gray-600">
+                Integracja z zewnętrznym, bezpiecznym dostawcą tożsamości.
+              </p>
+            </div>
+            <div class="card p-6 animated-element delay-3">
+              <h3 class="font-bold text-xl mb-2 text-teal-600">
+                Zarządzanie Sesją (JWT)
+              </h3>
+              <p class="text-gray-600">
+                Bezpieczne zarządzanie sesją użytkownika za pomocą tokenów
+                webowych.
+              </p>
+            </div>
+            <div class="card p-6 animated-element delay-4">
+              <h3 class="font-bold text-xl mb-2 text-teal-600">
+                Izolacja Danych
+              </h3>
+              <p class="text-gray-600">
+                Każdy użytkownik ma dostęp wyłącznie do swoich prywatnych
+                finansów.
+              </p>
+            </div>
+          </div>
+          <div class="speaker-notes">
+            "W aplikacji finansowej bezpieczeństwo jest priorytetem.
+            Zaimplementowałem pełny system autoryzacji, w tym popularne i
+            bezpieczne logowanie przez Google. Sesja jest zarządzana tokenami, a
+            architektura bazy danych gwarantuje, że dane użytkowników są w pełni
+            odizolowane."
+          </div>
+        </div>
+      </section>
 
+      <!-- SLIDE 7: Podsumowanie Funkcjonalne i Pytania -->
+      <section
+        id="slide-7"
+        class="slide text-center"
+      >
+        <div class="max-w-4xl mx-auto">
+          <p
+            class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 card px-6 py-3 rounded-lg inline-block animated-element"
+          >
+            KONTROLA, ANALIZA, OPTYMALIZACJA.
+          </p>
+          <h2
+            class="text-3xl sm:text-4xl md:text-5xl font-bold my-10 animated-element delay-1"
+          >
+            <span class="gradient-text">FINHELPER</span> to kompletna platforma
+            realizująca pełen cykl zarządzania finansami.
+          </h2>
+          <h3
+            class="text-4xl sm:text-5xl md:text-7xl font-black my-10 animated-element delay-2"
+          >
+            Dziękuję za uwagę.
+          </h3>
+          <div class="mt-10 animated-element delay-2">
+            <a
+              href="../index.html"
+              class="inline-block card hover:bg-gray-200 text-gray-800 rounded-full p-4 transition-colors duration-300 text-lg font-medium shadow-md"
+            >
+              &larr; Powrót do strony głównej
+            </a>
+          </div>
+          <div class="speaker-notes">
+            "Podsumowując, FINHELPER z powodzeniem implementuje wszystkie
+            kluczowe funkcje nowoczesnej aplikacji budżetowej: od rejestracji
+            danych, przez ich kategoryzację i budżetowanie, aż po inteligentną
+            analizę i bezpieczny eksport. Dziękuję za uwagę i zapraszam do
+            zadawania pytań dotyczących funkcjonalności lub implementacji."
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Nawigacja -->
-    <div class="fixed bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-4 z-10">
-        <button id="prev-btn" class="card hover:bg-gray-200 text-gray-800 rounded-full p-3 transition-colors duration-300">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-        </button>
-        <div id="slide-counter" class="text-lg font-medium text-gray-700">1 / 7</div>
-        <button id="next-btn" class="card hover:bg-gray-200 text-gray-800 rounded-full p-3 transition-colors duration-300">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-        </button>
+    <div
+      class="fixed bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-4 z-10"
+    >
+      <button
+        id="prev-btn"
+        class="card hover:bg-gray-200 text-gray-800 rounded-full p-3 transition-colors duration-300"
+      >
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 19l-7-7 7-7"
+          ></path>
+        </svg>
+      </button>
+      <div
+        id="slide-counter"
+        class="text-lg font-medium text-gray-700"
+      >
+        1 / 7
+      </div>
+      <button
+        id="next-btn"
+        class="card hover:bg-gray-200 text-gray-800 rounded-full p-3 transition-colors duration-300"
+      >
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 5l7 7-7 7"
+          ></path>
+        </svg>
+      </button>
     </div>
 
     <!-- Ładowanie skryptu JS -->
-    <script src="../scripts/script_funkcji.js" defer></script>
-</body>
+    <script
+      src="../scripts/script_funkcji.js"
+      defer
+    ></script>
+  </body>
 </html>
