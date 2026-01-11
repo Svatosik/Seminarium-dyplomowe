@@ -1,4 +1,4 @@
-<h1 align="center">FINHELPER - Projekt Pracy Inżynierskiej</h1>
+<h1 align="center">ExpenseMonitor - Projekt Pracy Inżynierskiej</h1>
 
 <p align="center">
 Nowoczesna aplikacja webowa do zarządzania finansami osobistymi oraz repozytorium prezentacji projektowych.
@@ -12,13 +12,13 @@ Prezentacje są dostępne online pod adresem: https://svatosik.github.io/Seminar
 
 🎯 O Projekcie
 
-FINHELPER to aplikacja internetowa do monitorowania i optymalizacji wydatków domowych, stworzona jako część mojej pracy inżynierskiej.
+ExpenseMonitor to aplikacja internetowa do monitorowania i optymalizacji wydatków domowych, stworzona jako część mojej pracy inżynierskiej.
 
 Dlaczego stworzyłem ten projekt?
 
 Wielu z nas doświadcza "finansowej ślepoty" – pieniądze znikają z konta, ale nie mamy pełnej świadomości, na co dokładnie je wydajemy. Istniejące narzędzia są często zbyt skomplikowane, toporne lub nieintuicyjne, co zniechęca do regularnego prowadzenia budżetu.
 
-Celem projektu FINHELPER było stworzenie narzędzia, które jest:
+Celem projektu ExpenseMonitor było stworzenie narzędzia, które jest:
 
 Intuicyjne: Posiada czysty, nowoczesny interfejs (UX/UI), który sprawia, że zarządzanie finansami jest proste.
 
@@ -28,7 +28,7 @@ Inteligentne: Nie tylko śledzi wydatki, ale także pomaga je optymalizować pop
 
 Co zawiera to repozytorium?
 
-To repozytorium służy jako centrum prezentacyjne dla aplikacji FINHELPER. Znajdują się tu dwie różne, interaktywne prezentacje webowe, stworzone, aby profesjonalnie przedstawić projekt:
+To repozytorium służy jako centrum prezentacyjne dla aplikacji ExpenseMonitor. Znajdują się tu dwie różne, interaktywne prezentacje webowe, stworzone, aby profesjonalnie przedstawić projekt:
 
 Portal Główny (index.html): Strona startowa, która pozwala wybrać jedną z dwóch prezentacji.
 
@@ -36,7 +36,7 @@ Pitch Deck (/pages/sprzedaz.html): Prezentacja "sprzedażowa", skierowana do pot
 
 Demo Funkcjonalności (/pages/funkcji.html): Prezentacja techniczna, idealna na obronę pracy. Demonstruje krok po kroku kluczowe funkcje aplikacji, takie jak dashboard, CRUD transakcji, budżetowanie czy generowanie raportów.
 
-✨ Kluczowe Funkcje Aplikacji FINHELPER
+✨ Kluczowe Funkcje Aplikacji ExpenseMonitor
 
 Aplikacja (prezentowana w demo) została zaprojektowana, aby oferować następujące możliwości:
 

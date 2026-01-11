@@ -3,59 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FINHELPER - Prezentacje Projektowe</title>
-    <!-- Ładowanie bibliotek -->
+    <title>ExpenseMonitor - Wybór Prezentacji</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Ładowanie czcionek -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    <!-- Ładowanie stylów CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body class="antialiased">
 
-    <!-- Główny kontener -->
-    <main class="main-container">
+    <div class="background-blob blob-1"></div>
+    <div class="background-blob blob-2"></div>
+
+    <main class="main-container relative z-10">
         
-        <div class="max-w-4xl mx-auto text-center">
-            <h1 class="text-5xl sm:text-6xl md:text-8xl font-black uppercase tracking-tighter gradient-text animated-element">
-                FINHELPER
-            </h1>
-            <h2 class="mt-4 text-xl sm:text-2xl md:text-3xl text-gray-700 animated-element delay-1">
-                Prezentacje Projektowe
-            </h2>
-            <p class="mt-6 text-lg text-gray-600 animated-element delay-2">Wybierz prezentację, którą chcesz zobaczyć:</p>
+        <div class="max-w-5xl mx-auto text-center px-4">
             
-            <!-- Kontener na karty nawigacyjne -->
-            <div class="mt-12 grid md:grid-cols-2 gap-8 text-left">
+            <div class="mb-2 animated-element">
+                <h1 class="text-5xl sm:text-7xl font-extrabold tracking-tight text-slate-800">
+                    Expense<span class="text-blue-500">Monitor</span>
+                </h1>
+            </div>
+
+            <h2 class="mt-4 text-xl sm:text-2xl font-medium text-slate-500 animated-element delay-1">
+                Panel Prezentacji Pracy Dyplomowej
+            </h2>
+            
+            <p class="mt-4 text-slate-400 animated-element delay-2">Wybierz tryb prezentacji:</p>
+            
+            <div class="mt-12 grid md:grid-cols-2 gap-6 text-left max-w-4xl mx-auto">
                 
-                <!-- Karta 1: Pitch Deck -->
-                <a href="./pages/sprzedaz.html" class="card-link animated-element delay-3">
-                    <div class="card h-full">
-                        <h3 class="font-bold text-xl mb-2 text-teal-600">Pitch Deck (Sprzedażowa)</h3>
-                        <p class="text-gray-600">Prezentacja dla inwestorów, skupiona na problemie, rozwiązaniu i wizji rozwoju.</p>
-                        <span class="card-arrow">&rarr;</span>
+                <a href="./pages/sprzedaz.html" class="group card-link animated-element delay-3">
+                    <div class="card h-full flex flex-col justify-between">
+                        <div>
+                            <div class="icon-container bg-blue-50 text-blue-600 mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+                            </div>
+                            <h3 class="font-bold text-2xl mb-2 text-slate-800 group-hover:text-blue-600 transition-colors">Pitch Deck (Biznes)</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed">
+                                Prezentacja sprzedażowa projektu. Analiza problemu, rozwiązanie, grupa docelowa oraz strategia rozwoju produktu.
+                            </p>
+                        </div>
+                        <div class="mt-6 flex items-center text-sm font-semibold text-blue-500">
+                            Zobacz prezentację
+                            <span class="ml-2 transform group-hover:translate-x-1 transition-transform">&rarr;</span>
+                        </div>
                     </div>
                 </a>
                 
-                <!-- Karta 2: Demo Funkcji -->
-                <a href="./pages/funkcji.html" class="card-link animated-element delay-4">
-                    <div class="card h-full">
-                        <h3 class="font-bold text-xl mb-2 text-amber-600">Demo Funkcjonalności</h3>
-                        <p class="text-gray-600">Szczegółowy przegląd funkcji: dashboardu, transakcji, budżetów i raportów.</p>
-                        <span class="card-arrow">&rarr;</span>
+                <a href="./pages/funkcji.html" class="group card-link animated-element delay-4">
+                    <div class="card h-full flex flex-col justify-between">
+                        <div>
+                            <div class="icon-container bg-emerald-50 text-emerald-600 mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><line x1="3" x2="21" y1="9" y2="9"/><line x1="9" x2="9" y1="21" y2="9"/></svg>
+                            </div>
+                            <h3 class="font-bold text-2xl mb-2 text-slate-800 group-hover:text-emerald-600 transition-colors">Prezentacja Funkcjonalności</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed">
+                                Szczegółowy przegląd możliwości systemu. Opis architektury, kluczowych modułów oraz technicznych aspektów aplikacji.
+                            </p>
+                        </div>
+                        <div class="mt-6 flex items-center text-sm font-semibold text-emerald-600">
+                            Uruchom Demo
+                            <span class="ml-2 transform group-hover:translate-x-1 transition-transform">&rarr;</span>
+                        </div>
                     </div>
                 </a>
             </div>
             
-            <!-- Stopka -->
-            <div class="mt-12 text-gray-500 animated-element delay-5">
-                <p>Sviatoslav Ilkiv | Praca Inżynierska</p>
+            <div class="mt-16 text-slate-400 text-sm animated-element delay-5 border-t border-slate-200 pt-8 inline-block px-12">
+                <p>Autor: <span class="font-semibold text-slate-600">Sviatoslav Ilkiv</span></p>
+                <p class="mt-1">Praca Inżynierska &copy; 2026</p>
             </div>
         </div>
 
     </main>
 </body>
 </html>
-

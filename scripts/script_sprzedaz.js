@@ -1,131 +1,83 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Pobranie elementów DOM
+
+  // --- 1. POBRANIE ELEMENTÓW ---
   const slides = document.querySelectorAll(".slide");
   const prevBtn = document.getElementById("prev-btn");
   const nextBtn = document.getElementById("next-btn");
   const slideCounter = document.getElementById("slide-counter");
   const progressBar = document.getElementById("progress-bar");
 
+  // Sprawdzenie czy elementy istnieją (dla pewności)
+  if (!prevBtn || !nextBtn) {
+    console.error("BŁĄD: Nie znaleziono przycisków w HTML!");
+    return;
+  }
+
   // Zmienne stanu
   let currentSlide = 0;
   const totalSlides = slides.length;
-  let chartInstance = null; // Przechowuje instancję wykresu
 
-  // Dane do wykresu
-  const chartData = {
-    labels: ["Żywność", "Transport", "Rozrywka", "Rachunki", "Inne"],
-    datasets: [
-      {
-        label: "Wrzesień",
-        data: [1200, 500, 400, 800, 300],
-        backgroundColor: "rgba(20, 184, 166, 0.7)", // Teal
-        borderColor: "rgba(15, 118, 110, 1)",
-        borderWidth: 1,
-        borderRadius: 5,
-      },
-      {
-        label: "Październik",
-        data: [1350, 450, 600, 820, 250],
-        backgroundColor: "rgba(245, 158, 11, 0.7)", // Amber/Gold
-        borderColor: "rgba(180, 83, 9, 1)",
-        borderWidth: 1,
-        borderRadius: 5,
-      },
-    ],
-  };
-
-  /**
-   * Renderuje wykres na slajdzie 4.
-   * Niszczy poprzednią instancję, jeśli istnieje, aby uniknąć błędów.
-   */
-  function renderChart() {
-    const ctx = document.getElementById("expensesChart").getContext("2d");
-    if (chartInstance) {
-      chartInstance.destroy();
-    }
-    chartInstance = new Chart(ctx, {
-      type: "bar",
-      data: chartData,
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        scales: {
-          y: {
-            beginAtZero: true,
-            ticks: { color: "#4B5563" },
-            grid: { color: "rgba(0, 0, 0, 0.05)" },
-          },
-          x: {
-            ticks: { color: "#4B5563" },
-            grid: { display: false },
-          },
-        },
-        plugins: {
-          legend: { labels: { color: "#1F2937" } },
-        },
-        animation: {
-          duration: 1000, // Czas trwania animacji w ms
-          easing: "easeOutQuart", // Typ animacji
-        },
-      },
-    });
-  }
-
-  /**
-   * Główna funkcja aktualizująca interfejs użytkownika.
-   * Pokazuje/ukrywa slajdy, aktualizuje licznik i pasek postępu.
-   * @param {number} index - Indeks slajdu do wyświetlenia.
-   */
-  function updateUI(index) {
-    // Pokaż aktywny slajd, ukryj resztę
-    slides.forEach((slide, i) => {
-      slide.classList.toggle("active", i === index);
+  // --- 2. FUNKCJA AKTUALIZUJĄCA WIDOK ---
+  function updateUI() {
+    // Ukryj/Pokaż slajdy
+    slides.forEach((slide, index) => {
+      if (index === currentSlide) {
+        slide.classList.add("active");
+      } else {
+        slide.classList.remove("active");
+      }
     });
 
-    // Zaktualizuj licznik
-    slideCounter.textContent = `${index + 1} / ${totalSlides}`;
-
-    // Zaktualizuj pasek postępu
-    progressBar.style.width = `${((index + 1) / totalSlides) * 100}%`;
-
-    // Zablokuj/odblokuj przyciski nawigacyjne
-    prevBtn.disabled = index === 0;
-    nextBtn.disabled = index === totalSlides - 1;
-    prevBtn.classList.toggle("opacity-50", index === 0);
-    nextBtn.classList.toggle("opacity-50", index === totalSlides - 1);
-
-    // Jeśli to slajd z wykresem (indeks 3), wyrenderuj go
-    if (index === 3) {
-      // Opóźnienie, aby animacja wykresu zgrała się z przejściem slajdu
-      setTimeout(renderChart, 100);
+    // Aktualizuj licznik (np. 1 / 7)
+    if (slideCounter) {
+      slideCounter.textContent = `${currentSlide + 1} / ${totalSlides}`;
     }
+
+    // Aktualizuj pasek postępu
+    if (progressBar) {
+      const progress = ((currentSlide + 1) / totalSlides) * 100;
+      progressBar.style.width = `${progress}%`;
+    }
+
+    // Blokowanie przycisków na początku i końcu
+    prevBtn.disabled = currentSlide === 0;
+    nextBtn.disabled = currentSlide === totalSlides - 1;
+
+    // Zmiana przezroczystości (wizualna blokada)
+    prevBtn.style.opacity = currentSlide === 0 ? "0.5" : "1";
+    nextBtn.style.opacity = currentSlide === totalSlides - 1 ? "0.5" : "1";
   }
 
-  // Funkcje nawigacyjne
-  function nextSlide() {
+  // --- 3. OBSŁUGA KLIKNIĘĆ ---
+  nextBtn.addEventListener("click", () => {
     if (currentSlide < totalSlides - 1) {
       currentSlide++;
-      updateUI(currentSlide);
+      updateUI();
     }
-  }
-
-  function prevSlide() {
-    if (currentSlide > 0) {
-      currentSlide--;
-      updateUI(currentSlide);
-    }
-  }
-
-  // Przypisanie event listenerów
-  nextBtn.addEventListener("click", nextSlide);
-  prevBtn.addEventListener("click", prevSlide);
-
-  // Nawigacja klawiaturą (strzałki)
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "ArrowRight") nextSlide();
-    else if (e.key === "ArrowLeft") prevSlide();
   });
 
-  // Inicjalizacja - pokaż pierwszy slajd
-  updateUI(currentSlide);
+  prevBtn.addEventListener("click", () => {
+    if (currentSlide > 0) {
+      currentSlide--;
+      updateUI();
+    }
+  });
+
+  // Obsługa klawiatury (Strzałki)
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowRight") {
+      if (currentSlide < totalSlides - 1) {
+        currentSlide++;
+        updateUI();
+      }
+    } else if (e.key === "ArrowLeft") {
+      if (currentSlide > 0) {
+        currentSlide--;
+        updateUI();
+      }
+    }
+  });
+
+  // Start
+  updateUI();
 });
