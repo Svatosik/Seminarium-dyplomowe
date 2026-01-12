@@ -149,14 +149,14 @@
                     <div class="card p-6 bg-white border-l-4 border-pink-500">
                         <h3 class="text-xl font-bold text-slate-800 mb-2">Logika Budżetowa</h3>
                         <p class="text-gray-600 text-sm leading-relaxed">
-                            Każda kategoria posiada atrybut `budget_limit`. System w czasie rzeczywistym sumuje wydatki dla danego `category_id` i porównuje je z limitem, obliczając procent wykorzystania.
+                            Każda kategoria posiada atrybut `budget_limit`. System w czasie rzeczywistym sumuje wydatki dla danego `category_id` i porównuje je z limitem.
                         </p>
                     </div>
 
                     <div class="card p-6 bg-white border-l-4 border-blue-500">
                         <h3 class="text-xl font-bold text-slate-800 mb-2">Personalizacja</h3>
                         <p class="text-gray-600 text-sm leading-relaxed">
-                            Użytkownik może definiować własne nazwy oraz kolory (HEX), które są następnie wykorzystywane dynamicznie przy renderowaniu wykresów Chart.js.
+                            Użytkownik może definiować własne nazwy oraz ikonkę, które są następnie wykorzystywane dynamicznie przy renderowaniu wykresów Chart.js.
                         </p>
                     </div>
                 </div>
@@ -238,9 +238,9 @@
                     </div>
 
                     <div class="card p-6 bg-white border-l-4 border-indigo-500">
-                        <h3 class="text-xl font-bold text-slate-800 mb-2">Prognoza (KPI)</h3>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Statystyka</h3>
                         <p class="text-gray-600 text-sm leading-relaxed">
-                            Wyliczanie średniego dziennego wydatku i estymacja stanu konta na koniec miesiąca, co pozwala użytkownikowi na proaktywne zarządzanie finansami.
+                            Wyliczanie dziennego wydatku, co pozwala użytkownikowi na proaktywne zarządzanie finansami.
                         </p>
                     </div>
                 </div>
@@ -387,9 +387,6 @@
                         <h3 class="text-xl font-bold text-slate-800 mb-3">Generowanie CSV</h3>
                         <p class="text-sm text-gray-600 mb-3">
                             Konwersja tablicy obiektów JSON do formatu CSV odbywa się w przeglądarce. Utworzony zostaje obiekt <strong>Blob</strong> z odpowiednim nagłówkiem MIME (`text/csv`).
-                        </p>
-                        <p class="text-xs font-mono bg-gray-100 p-2 rounded border">
-                            const blob = new Blob(["\uFEFF" + csvContent], ...);
                         </p>
                         <p class="text-xs text-gray-500 mt-1">Dodanie BOM (\uFEFF) gwarantuje poprawne wyświetlanie polskich znaków w Excelu.</p>
                     </div>
